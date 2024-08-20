@@ -18,14 +18,14 @@ const login =async (req, res) => {
       // Find the user by email
       const user = await User.findOne({ email });
       if (!user) {
-        return res.status(401).json({ error: 'Invalid email' });
+        return res.status(401).json({ error: 'Invalid email or password' });
       }
   
       // Verify the password
       const isPasswordValid = await bcrypt.compare(password, user.password);
       
       if (!isPasswordValid) {
-        return res.status(401).json({ error: 'Invalid password' });
+        return res.status(401).json({ error: 'Invalid email or password' });
       }
   
       // Generate an access token
