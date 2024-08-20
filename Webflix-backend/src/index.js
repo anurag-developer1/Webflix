@@ -72,7 +72,7 @@ app.use('/api/profilepic',authenticateToken,getprofilepicRoutes)
 app.use('/api/bookmark',cors(corsOptions),authenticateToken,bookmarkRoutes)
 app.use('/api/verify-token',verifytokenRoutes)
 app.use('/api/fetchbookmarks',authenticateToken, fetchbookmarksRoutes)
-app.use('/api/castandwbsite',castandwebsiteRoutes)
+app.use('/api/castandwebsite',castandwebsiteRoutes)
 app.use('/api/trailer', trailerRoutes)
 
 // For local testing
