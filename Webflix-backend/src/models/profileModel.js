@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const User = require('./userModel'); // Import user schema
 
 const profileSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true,unique: true },
   username: { type: String, ref: 'User' },
   email: { type: String, ref: 'User' },// Assuming email is a string
   fullName: { type: String, required: false },
