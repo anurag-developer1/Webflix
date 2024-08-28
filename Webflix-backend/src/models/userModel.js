@@ -18,6 +18,11 @@ const userSchema=new mongoose.Schema(
             required:true
         },
 
+        profile: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Profile'
+          },
+
         movieBookmarks:[{
             mediaType:String,
             details:Object
