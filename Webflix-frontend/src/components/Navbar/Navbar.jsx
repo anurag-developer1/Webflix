@@ -1,12 +1,18 @@
 import { SvgIcon } from "../SvgIcon/SvgIcon";
 import { IconName, getIconByName } from "../../utils/getIconByName";
 import { Link } from "react-router-dom";
-import Loader from "../Loader/Loader";
+
 
 import { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsLoggedIn, resetUserInfoState ,setAvatar} from "../../reduxstateslices/userInfoSlice";
 import { baseurl } from "../../utils/baseurl";
+
+const  PicLoader = () => (
+  <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+  </div>
+);
 
 function Navbar() {
   const dispatch = useDispatch();
@@ -126,87 +132,109 @@ function Navbar() {
   };
 
   return (
-    <div
-      className="
-      absolute left-0 right-0 top-0
-      sm:left-6 sm:right-6 sm:py-6
-      lg:fixed lg:bottom-0 lg:left-0 lg:top-0 lg:w-40 lg:p-8
-      "
-    >   
-      {isLoading && <Loader />}
+    <div>
+      {isLoading && <PicLoader />}
       <div
-        className="flex h-full items-center justify-between p-4 transition duration-500 sm:rounded-xl sm:hover:shadow-md lg:flex-col lg:rounded-[20px] lg:p-7 bg-semi-dark"
-      >
-        <div className="flex items-center justify-end xs:gap-4 gap-8 lg:gap-16 lg:flex-col">
-          <Link to="/home">
-            <SvgIcon
-              className="h-8 w-8 transition hover:opacity-75 fill-primary"
-              viewBox="0 0 32 26"
-            >
-              {getIconByName(IconName.LOGO)}
-            </SvgIcon>
-          </Link>
+    className="
+    absolute left-0 right-0 top-0
+    sm:left-6 sm:right-6 sm:py-6
+    lg:fixed lg:bottom-0 lg:left-0 lg:top-0 lg:w-40 lg:p-8
+    "
+  >   
+    {isLoading && <PicLoader />}
+    <div
+      className="flex h-full items-center justify-between p-4 transition duration-500 sm:rounded-xl sm:hover:shadow-md lg:flex-col lg:rounded-[20px] lg:p-7 bg-semi-dark"
+    >
+      <div className="flex items-center justify-end xs:gap-4 gap-8 lg:gap-16 lg:flex-col">
+        <Link to="/home">
+          <SvgIcon
+            className="h-8 w-8 transition hover:opacity-75 fill-primary"
+            viewBox="0 0 32 26"
+          >
+            {getIconByName(IconName.LOGO)}
+          </SvgIcon>
+        </Link>
 
-          <ul className="flex xs:gap-2 gap-4 sm:gap-8 lg:relative lg:flex-col fill-light">
-            <li>
-              <Link to="/home">
-                <SvgIcon className='h-5 w-5 fill-grey transition hover:fill-primary'>
-                  {getIconByName(IconName.HOME)}
-                </SvgIcon>
-              </Link>
-            </li>
-            <li>
-              <Link to="/movies">
-                <SvgIcon className='h-5 w-5 fill-grey transition hover:fill-primary'>
-                  {getIconByName(IconName.MOVIE)}
-                </SvgIcon>
-              </Link> 
-            </li>
-            <li>
-              <Link to="/tvseries">
-                <SvgIcon className='h-5 w-5 fill-grey transition hover:fill-primary'>
-                  {getIconByName(IconName.TV)}
-                </SvgIcon>
-              </Link>
-            </li>
-            <li>
-             <Link to="/bookmarks">
-                <SvgIcon className='h-5 w-5 fill-grey transition hover:fill-primary'>
-                  {getIconByName(IconName.BOOKMARK)}
-                </SvgIcon>
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <ul className="flex xs:gap-2 gap-4 sm:gap-8 lg:relative lg:flex-col fill-light">
+          <li>
+            <Link to="/home">
+              <SvgIcon className='h-5 w-5 fill-grey transition hover:fill-primary'>
+                {getIconByName(IconName.HOME)}
+              </SvgIcon>
+            </Link>
+          </li>
+          <li>
+            <Link to="/movies">
+              <SvgIcon className='h-5 w-5 fill-grey transition hover:fill-primary'>
+                {getIconByName(IconName.MOVIE)}
+              </SvgIcon>
+            </Link> 
+          </li>
+          <li>
+            <Link to="/tvseries">
+              <SvgIcon className='h-5 w-5 fill-grey transition hover:fill-primary'>
+                {getIconByName(IconName.TV)}
+              </SvgIcon>
+            </Link>
+          </li>
+          <li>
+           <Link to="/bookmarks">
+              <SvgIcon className='h-5 w-5 fill-grey transition hover:fill-primary'>
+                {getIconByName(IconName.BOOKMARK)}
+              </SvgIcon>
+            </Link>
+          </li>
+        </ul>
+      </div>
 
-        <div className="flex items-center justify-center gap-2 sm:gap-4 lg:flex-col">
-          <div className="relative">
-            {isLoggedIn ? (
-              <div className="flex items-center">
-                <button
-                  type="button"
-                  className="flex items-center gap-2 p-1 mr-2 rounded bg-primary hover:bg-light text-dark transition-all"
-                  aria-label="logout"
-                  title="Logout"
-                  onClick={handleLogout}
+      <div className="flex items-center justify-center gap-2 sm:gap-4 lg:flex-col">
+        <div className="relative">
+          {isLoggedIn ? (
+            <div className="flex items-center">
+              <button
+                type="button"
+                className="flex items-center gap-2 p-1 mr-2 rounded bg-primary hover:bg-light text-dark transition-all"
+                aria-label="logout"
+                title="Logout"
+                onClick={handleLogout}
+              >
+                <SvgIcon
+                  className="transition-color h-6 w-6 fill-none stroke-dark p-1 sm:h-8 sm:w-8 lg:h-5 lg:w-5"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
                 >
-                  <SvgIcon
-                    className="transition-color h-6 w-6 fill-none stroke-dark p-1 sm:h-8 sm:w-8 lg:h-5 lg:w-5"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                  >
-                    {getIconByName(IconName.EXIT)}
-                  </SvgIcon>
-                </button>
-                <div 
-                  className="relative h-8 w-8 overflow-hidden rounded-full border border-light bg-primary sm:h-8 sm:w-8 lg:h-10 lg:w-10 cursor-pointer"
-                  onClick={() => fileInputRef.current.click()}
+                  {getIconByName(IconName.EXIT)}
+                </SvgIcon>
+              </button>
+              <div 
+                className="relative h-8 w-8 overflow-hidden rounded-full border border-light bg-primary sm:h-8 sm:w-8 lg:h-10 lg:w-10 cursor-pointer"
+                onClick={() => fileInputRef.current.click()}
+              >
+                {avatar? <img 
+    src={avatar} 
+    alt="Profile" 
+    className="w-full h-full object-cover"
+  /> : null}
+                <SvgIcon
+                  className="fill-semi-dark px-1 pt-1"
+                  viewBox="0 0 24 24"
                 >
-                  {avatar? <img 
-      src={avatar} 
-      alt="Profile" 
-      className="w-full h-full object-cover"
-    /> : null}
+                  {getIconByName(IconName.AVATAR)}
+                </SvgIcon>
+              </div>
+              {!avatar && <input
+                type="file"
+                ref={fileInputRef}
+                onChange={handleFileUpload}
+                style={{ display: 'none' }}
+                formEncType="multipart/form-data"
+                accept="image/*"
+              />}
+            </div>
+          ) : (
+            <Link to="/signup">
+              <button className="block">
+                <div className="relative h-8 w-8 overflow-hidden rounded-full border border-light bg-primary sm:h-8 sm:w-8 lg:h-10 lg:w-10">
                   <SvgIcon
                     className="fill-semi-dark px-1 pt-1"
                     viewBox="0 0 24 24"
@@ -214,33 +242,14 @@ function Navbar() {
                     {getIconByName(IconName.AVATAR)}
                   </SvgIcon>
                 </div>
-                {!avatar && <input
-                  type="file"
-                  ref={fileInputRef}
-                  onChange={handleFileUpload}
-                  style={{ display: 'none' }}
-                  formEncType="multipart/form-data"
-                  accept="image/*"
-                />}
-              </div>
-            ) : (
-              <Link to="/signup">
-                <button className="block">
-                  <div className="relative h-8 w-8 overflow-hidden rounded-full border border-light bg-primary sm:h-8 sm:w-8 lg:h-10 lg:w-10">
-                    <SvgIcon
-                      className="fill-semi-dark px-1 pt-1"
-                      viewBox="0 0 24 24"
-                    >
-                      {getIconByName(IconName.AVATAR)}
-                    </SvgIcon>
-                  </div>
-                </button>
-              </Link>
-            )}
-          </div>
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
+  </div></div>
+    
   );
 }
 

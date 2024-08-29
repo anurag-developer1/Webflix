@@ -7,7 +7,7 @@ const morgan = require('morgan');
 
 // CORS configuration
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://movie-tv-app-phi.vercel.app', 'https://delightful-fudge-553d4a.netlify.app'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://webflix-mu.vercel.app', 'https://delightful-fudge-553d4a.netlify.app',],
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 };
