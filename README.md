@@ -42,7 +42,7 @@ Check out the demo of the app on YouTube: [Webflix App Demo](https://youtu.be/wY
 1. TMDB using API key
 2. MongoDB- A NoSQL database to store user related information.
 
-## API
+### API
 - TMDB through API key.
 - MongoDB - A NoSQL database to store user related information.
 
