@@ -13,16 +13,16 @@ Webflix is a fullstack entertainmet application with a REST API that allows user
 
 ## Demo
 Check out the demo of the app on YouTube: [Webflix App Demo](https://youtu.be/wYcSF2e1Quw?si=jLUfO44nbmQ30Nay)
-## Features
 
--Browse a vast collection of movies and tv series by infinite scrolling feature.
--Search for movies or tv series by title or genre.
--Details page for cast and website details of the selected movie or tv series.
--User authentication and authorization.
--User friendly UI and responsive design.
--User data safely stored and processed.
--Create and manage a personal watchlist by adding or removing bookmarks.
--RESTful API.
+## Features
+1.Browse a vast collection of movies and tv series by infinite scrolling feature.
+2.Search for movies or tv series by title or genre.
+3.Details page for cast and website details of the selected movie or tv series.
+4.User authentication and authorization.
+5.User friendly UI and responsive design.
+6.User data safely stored and processed.
+7.Create and manage a personal watchlist by adding or removing bookmarks.
+8.RESTful API.
 
 ## Tech Stack (Technologies used)
 
