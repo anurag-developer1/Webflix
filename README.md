@@ -49,29 +49,35 @@ Check out the demo of the app on YouTube: [Webflix App Demo](https://youtu.be/wY
 ## Installation
 
 ### Clone the repository:
-Copygit clone https://github.com/anurag-developer1/Webflix
+```bash
+git clone https://github.com/anurag-developer1/Webflix
 cd Webflix
-
+```
 ### Install dependencies:
-Copy# Install backend dependencies
+
+#### Install backend dependencies
+```bash
 cd Webflix-backend
 npm install  # or yarn install
-
+```
 ### Install frontend dependencies
+```bash
 cd ../Webflix-frontend
 npm install  # or yarn install
-
+```
 ### Set up environment variables:
 Create a .env file in the backend directory and add necessary environment variables (e.g., database connection string, API keys).
 ### Start the application:
-Copy# Start the backend server
+#### Start the backend server
+```bash
 cd ../Webflix-backend
 npm start  # or yarn start
-
-### Start the frontend development server
+```
+#### Start the frontend development server
+```bash
 cd ../Webflix-frontend
 npm run dev  or yarn run dev
-
+```
 
 ## API Documentation
 API Documentation Link: [https://documenter.getpostman.com/view/35021063/2sAXjNXqd9](https://documenter.getpostman.com/view/35021063/2sAXjNXqd9)
