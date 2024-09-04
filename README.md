@@ -58,12 +58,12 @@ cd Webflix
 #### Install backend dependencies
 ```bash
 cd Webflix-backend
-npm install  # or yarn install
+npm install 
 ```
 ### Install frontend dependencies
 ```bash
 cd ../Webflix-frontend
-npm install  # or yarn install
+npm install  
 ```
 ### Set up environment variables:
 Create a .env file in the backend directory and add necessary environment variables (e.g., database connection string, API keys).
@@ -71,12 +71,12 @@ Create a .env file in the backend directory and add necessary environment variab
 #### Start the backend server
 ```bash
 cd ../Webflix-backend
-npm start  # or yarn start
+npm start  
 ```
 #### Start the frontend development server
 ```bash
 cd ../Webflix-frontend
-npm run dev  or yarn run dev
+npm run dev  
 ```
 
 ## API Documentation
