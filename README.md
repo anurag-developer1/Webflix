@@ -92,4 +92,4 @@ Anurag - anuraagshrivastav202@gmail.com
 
 Project Link: [https://github.com/anurag-developer1/Webflix](https://github.com/anurag-developer1/Webflix)
 
-For any questions, suggestions, or discussions about the Smart Quiz App, feel free to reach out or open an issue on GitHub.
+For any questions, suggestions, or discussions about the WebFlix App, feel free to reach out or open an issue on GitHub.
