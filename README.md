@@ -15,7 +15,7 @@ Webflix is a fullstackkkkkkkk entertainmet application with a REST API that allo
 Check out the demo of the app on YouTube: [Webflix App Demo](https://youtu.be/wYcSF2e1Quw?si=jLUfO44nbmQ30Nay)
 
 ## Features
-- Browse a vast collection of movies and TV series using an infinite scrolling feature.
+- Browse a vast collection of movies and TVvvvvvv series using an infinite scrolling feature.
 - Search for movies or TV series by title or genre.
 - View details page for cast and website information of the selected movie or TV series.
 - User authentication and authorization.
