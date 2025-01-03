@@ -1,6 +1,6 @@
 # Webflix (A Fullstack entertainment web application)
 ## Overview
-Webflix is a fullstack entertainmet application with a REST API that allows users to browse, search, and manage their favorite and latest movies and TV series. This application provides unique experience to users by enabling them to create their profiles and upload their avatar and also add or remove bookmarks.
+Webflix is a fullstackkkkkkkk entertainmet application with a REST API that allows users to browse, search, and manage their favorite and latest movies and TV series. This application provides unique experience to users by enabling them to create their profiles and upload their avatar and also add or remove bookmarks.
 ## Table of contents
 - [Demo](#demo)
 - [Features](#features)
